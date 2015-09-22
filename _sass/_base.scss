@@ -8,13 +8,16 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+/**
+ * Google webfonts import
+ */
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto);
 
 /**
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
+    font-family: 'Roboto';
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
@@ -32,7 +35,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 3;
 }
 
 
@@ -80,7 +83,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 700;
+    font-family: 'Oswald';
 }
 
 
