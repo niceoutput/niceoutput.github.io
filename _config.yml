@@ -12,6 +12,8 @@ github_username:  niceoutput
 
 permalink: /:categories/:title
 
+comments: true
+
 links:
   - title: about
     url: /about
