@@ -3,21 +3,33 @@ layout: default
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
+  <!-- <section class="featured-article">
+    <h2>Featured Article</h2>
+    {% assign count = 0 %}
+      {% for post in site.posts reversed %}
+        {% if post.featured == true and count < 1 %}
+          <div class="post post-featured">
+            {% include post.html %}
+          </div>
+          {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+  </section> -->
+  <section class="latest-articles">
+    <h1 class="page-heading">Latest Articles</h1>
+    <ul class="post-list">
+      {% for post in site.posts reversed | limit:4 %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <p>{{ post.content | strip_html | strip_newlines | truncate:200 }}</p>
+          <a href="{{ post.url | prepend:site.baseurl }}">read more</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
