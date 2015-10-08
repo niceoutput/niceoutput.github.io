@@ -16,6 +16,12 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto';
     font-size: $base-font-size;
