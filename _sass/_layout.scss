@@ -1,11 +1,12 @@
 html,
 body {
     height: 100%;
+    box-sizing: border-box;
 }
 
 .container {
     min-height: 100%;
-    margin-bottom: -261px;
+    margin-bottom: -251px;
 
     &:after {
         content: "";
@@ -16,6 +17,8 @@ body {
 
 footer {
     height: 200px;
+    background: #58585A;
+    color: $grey-color-lightest;
 }
 
 /**
@@ -114,7 +117,21 @@ footer {
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding-top: 50px;
+
+    a {
+        color: $grey-color-lightest;
+        text-decoration: underline;
+
+        .icon {
+            text-decoration: none;
+            margin-right: 5px;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 .footer-heading {
@@ -130,7 +147,6 @@ footer {
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -142,18 +158,41 @@ footer {
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(15% - (#{$spacing-unit} / 2));
+    width:         calc(15% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(55% - (#{$spacing-unit} / 2));
+    width:         calc(55% - (#{$spacing-unit} / 2));
+}
+
+.logo-footer {
+    display: inline-block;
+    width: 69%;
+    float: left;
+    
+
+    .circle {
+        stroke: $grey-invert;
+    }
+
+    .letter-n {
+        fill: $grey-invert;
+    }
+    
+    .letter-o {
+        fill: $grey-invert;
+    }
+
+    .intersept {
+        fill: $grey-color;
+    }
 }
 
 @include media-query($on-laptop) {

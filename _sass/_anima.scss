@@ -1,0 +1,28 @@
+/**
+ * Animation styles
+ */
+
+
+.logo-header {
+	.circle-header-fixed {
+		z-index: 1;
+	}
+	.circle-header {
+		z-index: 2;
+		stroke: #ccc;
+	 	stroke-width: 0px;
+		stroke-dasharray: 20 300;
+		stroke-dashoffset: 400;
+		transition:scale 1s, stroke-width 1s, stroke-dasharray 2s, stroke-dashoffset 1s;
+	}
+	&:hover {
+		.circle-header {
+			stroke-width: 4px;
+  			stroke-dasharray: 320 0;
+  			stroke-dashoffset: 3;
+  			transform: scale(0.9);
+  			transform-origin: center center;
+		}
+
+	}
+}
