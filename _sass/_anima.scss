@@ -15,6 +15,12 @@
 		stroke-dashoffset: 400;
 		transition:scale 1s, stroke-width 1s, stroke-dasharray 2s, stroke-dashoffset 1s;
 	}
+	.letter-n,
+	.letter-o,
+	.intersect {
+		transition: fill 1.5s ease;
+	}
+
 	&:hover {
 		.circle-header {
 			stroke-width: 4px;
@@ -22,6 +28,15 @@
   			stroke-dashoffset: 3;
   			transform: scale(0.9);
   			transform-origin: center center;
+		}
+
+		.letter-n,
+		.letter-o {
+			fill: #ccc;
+		}
+
+		.intersect {
+			fill: $grey-color;
 		}
 
 	}
